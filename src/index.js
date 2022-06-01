@@ -85,32 +85,42 @@ const init = async () => {
   //call generate read me
   const generatedMD = generateReadMD(answers);
   console.log(generatedMD);
+  // now that we have the readme text,
+  // we want to create a new readme file and add this text to it
+
+  fs.writeFileSync("./Osman.md", generatedMD);
 };
 
 const generateReadMD = (answers) => {
-  return `
-        ## Projects
+  return `# Projects
         ${answers.title}
+
         ## Table Of Contents
         ${answers.content}
+
         ## Description
         ${answers.description}
+
         ## Instillation
         ${answers.installation}
+
         ## Usage
         ${answers.usage}
+
         ## License
         ${answers.license}
+
         ## Contribution
         ${answers.contribution}
+
         ## Tests
         ${answers.test}
+
         ## Contact Me
         ${answers.github}
-        ${answers.github}
-        `;
-  console.log(generateReadMD);
+
+        ## Contact Me
+        ${answers.email}`;
 };
 
-fs.writeFileSync("src/index.js", questions, init);
 init();

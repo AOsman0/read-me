@@ -1,6 +1,10 @@
 # Project Title
 
+Creating a READ.md
+
 ## Description
+
+This task involved using the terminal to create a professional read.me.
 
 ## Instalation
 
@@ -24,4 +28,5 @@ npm run start
 
 ## Contact Me
 
-Email Me @
+[Email Me](osmana9987@gmail.com)
+[GitHub](https://github.com/AOsman0)
