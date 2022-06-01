@@ -78,39 +78,39 @@ const questions = [
   },
 ];
 
-console.log(questions);
-
-const generateReadMD = (questions) => {
-  const readMD = (question) => {
-    `## Projects
-${question.title}
-        ## Table Of Contents
-        ${question.content}
-        ## Description
-        ${question.description}
-        ## Instillation
-        ${question.installation}
-        ## Usage
-        ${question.usage}
-        ## License
-        ${question.license}
-        ## Contribution
-        ${question.contribution}
-        ## Tests
-        ${question.test}
-        ## Contact Me
-        ${question.github}
-        ${question.github}
-        `;
-  };
+const init = async () => {
+  const answers = await inquirer.prompt(questions);
+  //display answers
+  console.log(answers);
+  //call generate read me
+  const generatedMD = generateReadMD(answers);
+  console.log(generatedMD);
 };
 
-const writeToFile = require("write-to-file");
+const generateReadMD = (answers) => {
+  return `
+        ## Projects
+        ${answers.title}
+        ## Table Of Contents
+        ${answers.content}
+        ## Description
+        ${answers.description}
+        ## Instillation
+        ${answers.installation}
+        ## Usage
+        ${answers.usage}
+        ## License
+        ${answers.license}
+        ## Contribution
+        ${answers.contribution}
+        ## Tests
+        ${answers.test}
+        ## Contact Me
+        ${answers.github}
+        ${answers.github}
+        `;
+  console.log(generateReadMD);
+};
 
-(async () => {
-  try {
-    await writeToFile("foo/bar/baz.txt", "Hello World!");
-  } catch (error) {
-    console.error(error.message);
-  }
-})();
+fs.writeFileSync("src/index.js", questions, init);
+init();
