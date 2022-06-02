@@ -93,34 +93,34 @@ const init = async () => {
 
 const generateReadMD = (answers) => {
   return `# Projects
-        ${answers.title}
+    ${answers.title}
 
-        ## Table Of Contents
-        ${answers.content}
+    ## Table Of Contents
+    ${answers.content}
 
-        ## Description
-        ${answers.description}
+    ## Description
+    ${answers.description}
 
-        ## Instillation
-        ${answers.installation}
+    ## Instillation
+    ${answers.installation}
 
-        ## Usage
-        ${answers.usage}
+    ## Usage
+    ${answers.usage}
 
-        ## License
-        ${answers.license}
+    ## License
+    ${answers.license}
 
-        ## Contribution
-        ${answers.contribution}
+    ## Contribution
+    ${answers.contribution}
 
-        ## Tests
-        ${answers.test}
+    ## Tests
+    ${answers.test}
 
-        ## Contact Me
-        ${answers.github}
+    ## Contact Me
+    ${answers.github}
 
-        ## Contact Me
-        ${answers.email}`;
+    ## Contact Me
+    ${answers.email}`;
 };
 
 init();
