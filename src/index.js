@@ -91,36 +91,47 @@ const init = async () => {
   fs.writeFileSync("./Osman.md", generatedMD);
 };
 
+// create a function that renders the license through the license link
+// if license is not == to no license then return the badge with the users selected license
+
+const renderLicenseBadge = (license) => {
+  if (license !== "No license") {
+    return `<img src="https://img.shields.io/badge/LICENSE-${license}-green">`;
+  } else {
+    return "";
+  }
+};
+
 const generateReadMD = (answers) => {
-  return `# Projects
-    ${answers.title}
+  return `# Projects ${renderLicenseBadge(answers.license)}
+${answers.title}
 
-    ## Table Of Contents
-    ${answers.content}
+## Table Of Contents
+${answers.content}
 
-    ## Description
-    ${answers.description}
+## Description
+${answers.description}
 
-    ## Instillation
-    ${answers.installation}
+## Instillation
+${answers.installation}
 
-    ## Usage
-    ${answers.usage}
+## Usage
+${answers.usage}
 
-    ## License
-    ${answers.license}
+## License
+${answers.license}
 
-    ## Contribution
-    ${answers.contribution}
+## Contribution
+${answers.contribution}
 
-    ## Tests
-    ${answers.test}
+## Tests
+${answers.test}
 
-    ## Contact Me
-    ${answers.github}
+## Contact Me
+${answers.github}
 
-    ## Contact Me
-    ${answers.email}`;
+## Contact Me
+${answers.email}`;
 };
 
 init();
