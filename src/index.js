@@ -81,10 +81,10 @@ const questions = [
 const init = async () => {
   const answers = await inquirer.prompt(questions);
   //display answers
-  console.log(answers);
+
   //call generate read me
   const generatedMD = generateReadMD(answers);
-  console.log(generatedMD);
+
   // now that we have the readme text,
   // we want to create a new readme file and add this text to it
 
