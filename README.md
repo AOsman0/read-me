@@ -28,13 +28,17 @@ npm run start
 
 ```
 
-## Screenshot and Video Walkthrough Link
+## Screenshot
 
 ![screenshot1](./images/Screenshot%202022-06-03%20at%2016.22.17.png)
 
 ![screenshot1](./images/Screenshot%202022-06-03%20at%2016.22.29.png)
 
 ![screenshot1](./images/Screenshot%202022-06-03%20at%2016.22.34.png)
+
+## Video Walkthrough Link
+
+(https://drive.google.com/drive/folders/10oz_afFMw2-U9NZLh0v7S81wQXLueAXc?usp=sharing)
 
 ## Contact Me
 
