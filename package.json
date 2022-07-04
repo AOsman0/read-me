@@ -1,0 +1,23 @@
+{
+  "name": "read-me",
+  "version": "1.0.0",
+  "description": "This project involved creating a read-me using nodeJS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AOsman0/read-me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AOsman0/read-me/issues"
+  },
+  "homepage": "https://github.com/AOsman0/read-me#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
